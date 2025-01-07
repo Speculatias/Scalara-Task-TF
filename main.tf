@@ -92,6 +92,10 @@ resource "aws_instance" "web" {
 
     # Install GIT
     yum install -y git
+
+    # Clone example project
+    cd /home/ec2-user && git clone https://github.com/Speculatias/Scalara-Task-Web-Example.git
+    cd /home/ec2-user/Scalara-Task-Web-Example && docker-compose up -d --force-recreate --build
   EOF
 
   tags = {
