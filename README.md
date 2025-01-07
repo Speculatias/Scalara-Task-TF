@@ -31,6 +31,14 @@ To initialize Terraform and configure the backend, use the following command.
     terraform init
     ```
 
+## Plan Infrastructure
+
+Check which configuration changes will be performed.
+
+    ```sh
+    terraform plan
+    ```
+
 ## Apply Infrastructure
 
 After successful initialisation the configuration could be applied.
@@ -41,5 +49,14 @@ After successful initialisation the configuration could be applied.
 
 **Important Note:** Before applying changes, always verify that only your intended changes will be applied.
 
+## Destroy Infrastructure
+
+To stop the website destroy the AWS resources.
+
+    ```sh
+    terraform destroy
+    ```
+
 ## Known issues
 
+EC2 Instance is only stopped and not deleted entirely.
